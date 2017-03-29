@@ -11,19 +11,47 @@
   <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--
-    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
-    This is an example of how to add features to index.html for only one environment.
-   -->
-    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
-    <!-- BEGIN TRACKJS -->
-    <script type="text/javascript">window._trackJs = { token: '<%=htmlWebpackPlugin.options.trackJSToken%>' };</script>
-    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
-    <!-- END TRACKJS -->
-    <% } %>
-  <meta charset="UTF-8">
+<!--
+The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
+This is an example of how to add features to index.html for only one environment.
+-->
+<% if (htmlWebpackPlugin.options.trackJSToken) { %>
+<!-- BEGIN TRACKJS -->
+<script type="text/javascript">window._trackJs = { token: '<%=htmlWebpackPlugin.options.trackJSToken%>' };</script>
+<script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+<!-- END TRACKJS -->
+<% } %>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
+
+<!-- Header & Navigation -->
+<header>
+  <div class="container">
+    <div class="row">
+      <h1>Artūrs Jenots</h1>
+    </div>
+    <!-- Navbar -->
+    <div class="row">
+      <nav>
+        <ul>
+          <li><a href="#">Sākums</a></li>
+          <li><a href="#">Raksti</a></li>
+          <li><a href="#">Ceļā</a></li>
+          <li><a href="#">Darbi</a></li>
+          <li><a href="#">Par Mani</a></li>
+          <li><a href="#">Kontakti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Content -->
+<div class="row small-up-1 medium-up-2 large-up-3"></div>
 
 </body>
 </html>
