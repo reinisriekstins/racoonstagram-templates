@@ -27,7 +27,7 @@ coverage
 build/Release
 
 # Dependency directories
-node_modules
+node_modules/**
 jspm_packages
 
 # Optional npm cache directory
@@ -44,3 +44,10 @@ dist
 
 #mock db
 db.json
+
+# include 2 modified files from foundation-sites, despite them being in node_modules
+!node_modules/foundation-sites
+!node_modules/foundation-sites/scss
+!node_modules/foundation-sites/scss/foundation.scss
+!node_modules/foundation-sites/scss/settings
+!node_modules/foundation-sites/scss/settings/_settings.scss
