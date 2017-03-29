@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 @import '../node_modules/foundation-sites/assets/foundation';
 
-$primary-color: #f8f8f8;
-$secondary-color: white;
-$border-color: #aaa;
-$text-color: black;
+$box-shadow-color: $medium-gray;
 $hover-color: dodgerblue;
 $duration-short:  0.35s;
-$duration-med: 0.7s;
+$duration-mid: 0.7s;
 
 @mixin hover-transition-color($duration) {
   color: $hover-color;
@@ -18,52 +15,37 @@ $duration-med: 0.7s;
   box-shadow: 0 0 1px $color;
 }
 
-html, body, ul, ol {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  // font-family: 'Open Sans', sans-serif;
-  color: $text-color;
-  background: $primary-color;
-}
-
 header {
-  background: white;
-  @include box-shadow($border-color);
-  padding: 0px;
+  background: $white;
+  @include box-shadow($box-shadow-color);
   margin-bottom: 15px;
+
   // Artūrs Jenots Banner
   h1 {
     text-align: center;
-    // margin: 0 auto;
-    // font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 4em;
+    font-size: 4rem;
     &:hover {
       cursor: default;
       @include hover-transition-color($duration-short);
     }
   }
-}
 
-// Navbar
-nav {
-  width: 100%;
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style: none;
-    a, a:visited {
-      font-size: 1.5em;
-      text-align: center;
-      text-decoration: none;
-      color: $text-color;
-      &:hover, &:focus, &:active {
-        @include hover-transition-color($duration-short);
+  // Navbar
+  nav {
+    width: 100%;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      list-style: none;
+      a, a:visited {
+        font-size: 1.5em;
+        text-align: center;
         text-decoration: none;
+        &:hover, &:focus, &:active {
+          @include hover-transition-color($duration-short);
+          text-decoration: none;
+        }
       }
     }
   }
@@ -72,73 +54,19 @@ nav {
 // Blog Post Thumbnails
 .post-thumbnail {
   @extend .callout;
-  // border-color: $border-color;
+  text-align: center;
   border: none;
-  @include box-shadow($border-color);
+  @include box-shadow($box-shadow-color);
   &:hover {
-    transition: box-shadow $duration-med;
-    box-shadow: 0 0 4px $border-color;
-  }
-  h3 {
-    color: $text-color;
+    transition: box-shadow $duration-mid;
+    box-shadow: 0 0 4px $box-shadow-color;
   }
   a:hover {
-    h3 {
-      @include hover-transition-color($duration-med);
+    h5 {
+      @include hover-transition-color($duration-mid);
     }
   }
   p {
-    color: $text-color;
-  }
-}
-
-// Content
-// .col-xs-12.col-sm-6.col-md-4 {
-//   height: 300px;
-// //   border: solid 1px red;
-// }
-
-// Temporary
-// .post-thumbnail {
-//   @include box-shadow($border-color);
-//   width: 300px;
-//   height: 280px;
-//   background: white;
-//   margin: 0 auto;
-//   text-align: center;
-//   &:hover {
-//     transition: box-shadow $duration-med;
-//     box-shadow: 0 0 3px $border-color;
-//   }
-//   .image {
-//     background: #bbb;
-//     color: white;
-//     height: 220px;
-//     .image-child {
-//       line-height: 1400%;
-//     }
-//   }
-//   .post-title {
-//     font-size: 1.2em;
-//     margin: 8px 6px;
-//   }
-//   a, a:visited {
-//     text-align: center;
-//     text-decoration: none;
-//     color: $text-color;
-//     &:hover, &:focus, &:active {
-//       @include hover-transition-color($duration-med);
-//     }
-//   }
-// }
-
-@media (max-width: 704px) {
-
-}
-
-.callout {
-  text-align: center;
-  img {
-    // margin: 0 auto;
+    text-align: justify;
   }
 }
