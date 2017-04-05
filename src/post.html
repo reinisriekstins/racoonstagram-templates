@@ -1,23 +1,52 @@
 <!--
-  **NOTE:** This is a template for index.html.
-  It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment.
-  htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles
-  to this file. The generated bundles have hash-based filenames,
-  so it's necessary to add the references dynamically.
-  For more info on ejs, see http://www.embeddedjs.com/.
-  For examples of using it with htmlWebpackPlugin,
-  see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
-  -->
-  <!DOCTYPE html>
+**NOTE:** This is a template for index.html.
+It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment.
+htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles
+to this file. The generated bundles have hash-based filenames,
+so it's necessary to add the references dynamically.
+For more info on ejs, see http://www.embeddedjs.com/.
+For examples of using it with htmlWebpackPlugin,
+see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--
-    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
-    This is an example of how to add features to index.html for only one environment.
-   -->
-  <meta charset="UTF-8">
+
+<!--
+The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
+This is an example of how to add features to index.html for only one environment.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
-  yoo
+
+<!-- Header & Navigation -->
+<header>
+  <div class="container">
+    <div class="row">
+      <h1>Artūrs Jenots</h1>
+    </div>
+    <!-- Navbar -->
+    <div class="row">
+      <nav>
+        <ul>
+          <li><a href="#">Sākums</a></li>
+          <li><a href="#">Raksti</a></li>
+          <li><a href="#">Ceļā</a></li>
+          <li><a href="#">Darbi</a></li>
+          <li><a href="#">Par Mani</a></li>
+          <li><a href="#">Kontakti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Blog Posts -->
+<div id="blog-posts" class="row"></div>
+
+<script src="bundle.js"></script>
 </body>
 </html>
