@@ -92,4 +92,15 @@ header {
   p {
     text-align: justify;
   }
+  .image {
+    background-image: url('http://budgetstockphoto.com/bamers/stock_photo_spectrum.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // TODO: use media queries to make height dependent on window width
+    height: 300px;
+    transform: scale(1);
+    transition: all $duration-mid;
+  }
+}
 }
