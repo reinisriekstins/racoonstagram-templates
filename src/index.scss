@@ -103,4 +103,25 @@ header {
     transition: all $duration-mid;
   }
 }
+
+//****************
+// Posts Page
+//****************
+.blog-post {
+  .title {
+    text-align: center;
+  }
+  // dirty, hack way of getting the date aligned to the right side,
+  // couldn't figure out a way to do it in a more clean way
+  text-align: right;
+  .date {}
+  p {
+    text-align: justify;
+    &:first-of-type {
+      margin-top: 5px;
+    }
+  }
+  padding-bottom: 15px;
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 45px;
 }
