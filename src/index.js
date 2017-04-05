@@ -22,3 +22,28 @@ $('.row.small-up-1.medium-up-2.large-up-3').append(() => {
   }
   return content
 })
+
+//****************
+// Posts Page
+//****************
+$('#blog-posts').html(() => {
+  let content = ''
+  const date = new Date()
+  const formattedDate = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}.`
+  for (let i = 0; i < 6; i++) {
+    content += `
+      <div class="large-10 large-offset-1 medium-10 medium-offset-1 small-10 small-offset-1">
+        <div class="blog-post">
+          <a class="title" href="#"><h4>Raksts ${i+1}</h4></a>
+          <a class="date" href="#">${formattedDate}</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem nostrum repudiandae, ullam voluptatum amet quaerat unde dolorum debitis soluta harum.
+          </p>
+          <p>Corporis dolorem voluptatum voluptatem debitis placeat nihil, laborum est quisquam, neque recusandae aspernatur atque doloremque, explicabo maiores ut at qui!
+          </p>
+          <p>Doloremque vel voluptatem consequatur incidunt non debitis omnis pariatur totam unde adipisci, soluta, in laborum ipsa saepe perferendis temporibus modi.
+          </p>
+        </div>
+      </div>`
+  }
+  return content
+})
