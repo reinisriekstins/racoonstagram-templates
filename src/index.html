@@ -30,33 +30,44 @@ This is an example of how to add features to index.html for only one environment
 </head>
 <body>
 
-<!-- Header & Navigation -->
+<!-- Header -->
 <header>
   <div class="container">
+    <!-- Search Bar -->
+    <div id="search-bar-row" class="row">
+      <form action="">
+        <div class="large-3 large-offset-8 medium-3 medium-offset-8 small-10 columns">
+          <input type="text" placeholder="Meklēt">
+        </div>
+        <div class="large-1 medium-1 small-2 columns">
+          <button type="submit" class="button secondary">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Artūrs Jenots Logo -->
     <div class="row">
       <h1>Artūrs Jenots</h1>
     </div>
-    <!-- Navbar -->
-    <div class="row">
-      <nav>
-        <ul>
-          <li><a href="#">Sākums</a></li>
-          <li><a href="#">Raksti</a></li>
-          <li><a href="#">Ceļā</a></li>
-          <li><a href="#">Darbi</a></li>
-          <li><a href="#">Par Mani</a></li>
-          <li><a href="#">Kontakti</a></li>
-          <!--<li>
-            <form action="">
-               <input type="text">
-               <button class="button secondary" type="submit">Meklēt</button>
-            </form>
-          </li>-->
-        </ul>
-      </nav>
-    </div>
   </div>
 </header>
+
+<!-- Navbar -->
+<div id="nav-wrapper">
+  <nav>
+    <div class="row">
+      <ul id="navbar">
+        <li class="collapsed"><a href="#">Sākums</a></li>
+        <li class="collapsed"><a href="#">Raksti</a></li>
+        <li class="collapsed"><a href="#">Ceļā</a></li>
+        <li class="collapsed"><a href="#">Darbi</a></li>
+        <li class="collapsed"><a href="#">Par Mani</a></li>
+        <li class="collapsed"><a href="#">Kontakti</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
 <!-- Content -->
 <div class="row small-up-1 medium-up-2 large-up-3">
