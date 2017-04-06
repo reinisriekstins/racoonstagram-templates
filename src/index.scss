@@ -50,13 +50,38 @@ nav {
   width: 100%;
   position:absolute;
   z-index: 10;
-        text-align: center;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    a, a:visited {
+      font-size: 1.5em;
+      text-align: center;
+    }
+    @include breakpoint(medium) {
+      #nav-collapse {
+        display: none;
       }
-      @include breakpoint(small only) {
-        flex-direction: column;
-        li {
-          text-align: center;
+    }
+    @include breakpoint(small only) {
+      flex-direction: column;
+      li {
+        text-align: center;
+        transition: display $duration-mid;
+      }
+      #nav-collapse {
+        text-align: left;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        button {
+          margin: 0;
         }
+      }
+      .collapsed {
+        display: none;
       }
     }
   }

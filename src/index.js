@@ -37,6 +37,22 @@ $(window).bind('scroll', () => {
         $nav.attr('style', 'position:absolute;');
     }
 });
+
+//****************************************
+// Button that collapses navbar on mobile
+//****************************************
+const
+  $navCollapseButton = $('#nav-collapse>button'),
+  $collapsableItems = $('#navbar>*:not(#nav-collapse)')
+
+let collapsed = true
+$navCollapseButton.click(() => {
+  if (!collapsed) $collapsableItems.addClass('collapsed')
+  else $collapsableItems.removeClass('collapsed')
+
+  collapsed = !collapsed
+})
+
 //****************
 // Posts Page
 //****************
