@@ -4,7 +4,6 @@
 //****************
 // Index Page
 //****************
-$box-shadow-color: $medium-gray;
 $hover-color: dodgerblue;
 $duration-short:  0.35s;
 $duration-mid: 0.7s;
@@ -26,10 +25,9 @@ a {
 // Header
 header {
   background: $white;
-  box-shadow: 0 0 1px $box-shadow-color;
-  margin-bottom: 15px;
+  padding-top: 10px;
 
-  // Artūrs Jenots Banner
+  // Artūrs Jenots Logo
   h1 {
     text-align: center;
     font-size: 4rem;
@@ -68,11 +66,11 @@ header {
   @extend .callout;
   text-align: center;
   border: none;
-  box-shadow: 0 0 1px $box-shadow-color;
+  border: 1px solid $medium-gray;
   transition: all $duration-mid;
-  &:hover {
-    box-shadow: 0 0 4px $box-shadow-color;
-  }
+  // &:hover {
+  //   box-shadow: 0 0 4px $dark-gray;
+  // }
   figure {
     overflow: hidden;
   }
