@@ -37,18 +37,19 @@ header {
       color: $hover-color;
     }
   }
+}
 
-  // Navbar
-  nav {
-    width: 100%;
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      list-style: none;
-      margin: 0;
-      a, a:visited {
-        font-size: 1.5em;
+// Navbar
+#nav-wrapper {
+  height: 54px;
+}
+nav {
+  background: $white;
+  border-bottom: 1px solid $medium-gray;
+  margin-bottom: 15px;
+  width: 100%;
+  position:absolute;
+  z-index: 10;
         text-align: center;
       }
       @include breakpoint(small only) {

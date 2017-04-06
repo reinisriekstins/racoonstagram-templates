@@ -23,6 +23,20 @@ $('.row.small-up-1.medium-up-2.large-up-3').append(() => {
   return content
 })
 
+//********************
+// Top sticky navbar
+// ********************
+const $nav = $('nav')
+
+const navPositionFromTop = $nav.offset().top + $nav.height() / 4
+$(window).bind('scroll', () => {
+
+    if ($(window).scrollTop() > navPositionFromTop) {
+        $nav.attr('style', 'position:fixed;top:0px');
+    } else {
+        $nav.attr('style', 'position:absolute;');
+    }
+});
 //****************
 // Posts Page
 //****************
